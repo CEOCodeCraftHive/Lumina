@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Lumina Official</title>
+    <style>
+        /* imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+        main{
+            width: 98%;
+            margin: auto;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+        }
+        *{
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+        }
+        .leftbar{
+            width: 30%;
+            padding: 1rem;
+            height: 90vh;
+            border-radius: 0.7rem;
+            background-color: #2A9D8F;
+        }
+        h4{
+            width: 100%;
+            font-size: 1.4rem;
+            color: white;
+            background-color: #2A9D8F;
+            border: 1px solid white;
+            border-radius: 400rem;
+            text-align: center;
+            padding: 0.4rem 0rem;
+            cursor: pointer;
+        }
+        .rightbar{
+            width: 68%;
+            height: 90vh;
+            padding: 1rem;
+            border: 1px solid rgb(223, 223, 223);
+            border-radius: 0.5rem;
+            overflow: scroll;
+        }
+        input, textarea, select{
+            padding: 0.5rem;
+            outline: none;
+            border: 1px solid #2A9D8F;
+            margin-bottom: 1rem;
+        }
+        textarea{
+            width: 90%;
+            height: 7rem;
+        }
+        button{
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1.6rem;
+            font-weight: 800;
+            background-color: #2A9D8F;
+            color: white;
+            outline: none;
+            border: 1px solid transparent;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(150, 148, 148);
+        }
+        label{
+            display: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            background-color: #2a9d905d;
+            color: red;
+        }
+        .addProduct{
+            display: block;
+        }
+        .seeOrders, .printDetails{
+            display: none;
+        }
+        .orderMainDetails{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .detailsBody{
+            margin: auto;
+            margin-top: 25%;
+            transform: translateY(-50%);
+            width: 50rem;
+            height: 25rem;
+            border-radius: 1rem;
+            background: white !important;
+            padding: 1rem;
+        }
+        .heading{
+            font-weight: 800;
+            color: #2A9D8F;
+        }
+        #close{
+            position: fixed;
+            top: 1rem;
+            right: 5rem !important;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="leftbar">
+            <h3 style="text-align: center; color: white; font-size: 2rem; font-weight: 800; padding-bottom: 1rem; border-bottom: 1px solid white;">Admin Dashboard</h3>
+
+            <h4 id="AddPr" style="background-color: white; color: #2A9D8F; border-color: transparent;">Add Product</h4>
+            <h4 id="SeeOr">See Orders</h4>
+            <h4 id="PrintDe">Print Details</h4>
+        </div>
+        <div class="rightbar">
+            <div class="addProduct">
+                <h3 style="color: #2A9D8F; font-size: 1.7rem;">___Add Product Information</h3>
+
+                <input type="text" name="productName" id="ProductName" placeholder="ProductName">
+                <input type="text" name="productPrice" id="productPrice" placeholder="productPrice">
+                <input type="text" name="productFabric" id="productFabric" placeholder="productFabric">
+                <input type="text" name="productColor" id="productColor" placeholder="productColor">
+                <select style="margin-bottom: 1rem; padding: 0.5rem;" name="category" id="category">
+                    <option disabled selected value="1">Select Category</option>
+                    <option value="2-piece(Stiched)">2-piece(Stiched)</option>
+                    <option value="2-piece(Unstiched)">2-piece(Unstiched)</option>
+                    <option value="3-piece(Stiched)">3-piece(Stiched)</option>
+                    <option value="3-piece(Unstiched)">3-piece(Unstiched)</option>
+                </select>
+                <textarea name="descriiption" id="description" placeholder="Description"></textarea>
+                <input style="border-color: transparent;" type="file" name="images" id="productImages" accept="image/*" multiple>
+
+                <button id="addProduct">Add Product</button>
+                <label>Product added successfully!</label>
+                
+            </div>
+            <div class="seeOrders">
+                <h3 style="color: #2A9D8F; font-size: 1.7rem;">___Order's Details</h3>
+
+                <label for="year">Year</label>
+                <input type="number" name="year" id="year" placeholder="Enter Year">
+
+                <select name="month" id="month">
+                    <option disabled selected value="Month">Select Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">October</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+                <select name="day" id="day">
+                    <option disabled selected value="Month">Select Day</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+
+                <span style="font-weight: 800; color: #2A9D8F;">__Total Orders: </span><span>200</span>
+                <span style="font-weight: 800; color: #2A9D8F;">__Total Cost: </span><span>15000</span>
+
+                <div class="orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="min-width: 5rem;">Sr. No</th>
+                                <th style="min-width: 10rem;">Order ID</th>
+                                <th style="min-width: 15rem;">Buyer's Name</th>
+                                <th style="min-width: 15rem;">Buyer's Address</th>
+                                <th style="min-width: 10rem;">More Details</th>
+                                <th style="min-width: 10rem;">Delivered?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="text-align: center;">
+                                <td>01</td>
+                                <td>Lum-01</td>
+                                <td>Syed Ali Abbas Naqvi</td>
+                                <td>House#2, street440, Subri Muzaffarabad</td>
+                                <td><button class="seeDet" id="01" style="font-size: 1rem; background-color: transparent; color: #2A9D8F;">See All Details</button></td>
+                                <td><button style="font-size: 1rem; background-color: #2A9D8F; color: white;">Yes</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="printDetails">
+                <h3 style="color: #2A9D8F; font-size: 1.7rem;">___Print Order's Details</h3>
+
+                <label for="year">Year</label>
+                <input type="number" name="year" id="year" placeholder="Enter Year">
+
+                <select name="month" id="month">
+                    <option disabled selected value="Month">Select Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">October</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+                <select name="day" id="day">
+                    <option disabled selected value="Month">Select Day</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <button style="width: fit-content; font-size: 1.4rem; padding: 0.4rem 1rem; margin-left: 3rem;">Print</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="orderMainDetails">
+        <div class="detailsBody">
+            <span class="heading">__Order ID: </span>
+            <span>Lum-01</span>
+            
+            <span class="heading">__Total Products: </span>
+            <span>05</span>
+            
+            <span class="heading">__Total Cost: </span>
+            <span>15000</span>
+            
+            <span class="heading">__Status: </span>
+            <span>Delivered</span><br><br>
+
+            <span class="heading">__Buyer Name: </span>
+            <span>Syed Ali Abbas Naqvi</span><br>
+            
+            <span class="heading">__Buyer Address: </span>
+            <span>Subri Muzaffarabad</span><br>
+            
+            <span class="heading">__Buyer Contact: </span>
+            <span>0345464671 - aliabbas@gmail.com</span><br><br>
+
+            <span class="heading">__Products' Names: </span><br>
+
+            <span>Two Piece Kurta Set (Unstiched) - 02</span>
+            <span style="margin-left: 2rem;"></span>
+            <span>Red Cotton Dupatta - 04</span><br>
+            
+
+            <span>Two Piece Kurta Set (Unstiched) - 02</span>
+            <span style="margin-left: 2rem;"></span>
+            <span>Red Cotton Dupatta - 04</span><br>
+
+            <span>Two Piece Kurta Set (Unstiched) - 02</span>
+            <span style="margin-left: 2rem;"></span>
+            <span></span><br>
+
+        </div>
+    </div>
+
+    <button id="close" style="background-color: transparent; color: white; outline: none; border: none; position: fixed; top: 0.5rem; right: 1rem;">CLOSE</button>
+
+</body>
+<script>
+    document.getElementById('productImages').addEventListener('change', function() {
+        if (this.files.length > 10) {
+            alert('You can only select up to 10 images.');
+            this.value = ''; // Clear the input
+        }
+    });
+</script>
+<script>
+    // Function to show the respective div and hide the others
+function showDiv(targetClass) {
+    // All the divs
+    const divs = document.querySelectorAll('.addProduct, .seeOrders, .printDetails');
+    
+    // Loop through each div and set display property
+    divs.forEach(div => {
+        if (div.classList.contains(targetClass)) {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    });
+}
+
+// Add event listeners to the buttons
+document.getElementById('AddPr').addEventListener('click', function() {
+    showDiv('addProduct');
+});
+
+document.getElementById('SeeOr').addEventListener('click', function() {
+    showDiv('seeOrders');
+});
+
+document.getElementById('PrintDe').addEventListener('click', function() {
+    showDiv('printDetails');
+});
+
+</script>
+<script>
+    // JavaScript code
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the elements
+    const seeDetButtons = document.querySelectorAll('.seeDet');
+    const orderMainDetails = document.querySelector('.orderMainDetails');
+    const closeButton = document.getElementById('close');
+
+    // Function to show the orderMainDetails div
+    function showDetails() {
+        orderMainDetails.style.display = 'block';
+    }
+
+    // Function to hide the orderMainDetails div
+    function hideDetails() {
+        orderMainDetails.style.display = 'none';
+    }
+
+    // Attach click event listener to all seeDet buttons
+    seeDetButtons.forEach(button => {
+        button.addEventListener('click', showDetails);
+    });
+
+    // Attach click event listener to the close button
+    closeButton.addEventListener('click', hideDetails);
+});
+
+</script>
+</html>

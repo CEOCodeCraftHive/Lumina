@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Lumina Official</title>
+
+    <!-- Linked files  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <button id="back-home"><i class="fas fa-arrow-left"></i> Back</button>
+        <img src="assets/images/logo.png" alt="This is the logo image">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="shoppingCartMain">
+        <div class="sc-left">
+            <img src="assets/images/shoppingCart.png" alt="This is the shopping cart image!">
+        </div>
+        <div class="sc-right">
+            <h3 class="heading1">___Shopping Cart</h3>
+            <p>Please select products from cart</p>
+
+            <input type="checkbox" name="selectAllProducts" id="selectAllProducts">
+            <label id="labelforheading" for="selectAllProducts">Select all products</label>
+            <div class="cartProducts">
+                <div class="cartProductsHeading">
+                    <div class="checkproduct"></div>
+                    <div class="srNumber">Sr. No.</div>
+                    <div class="pName">Product Name</div>
+                    <div class="pUnits">Units</div>
+                    <div class="pPrice">Price</div>
+                    <div class="pAction">Action</div>
+                </div>
+
+
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">01</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">02</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">03</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">04</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">05</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">06</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">07</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">08</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+                <div class="cartProductsValues">
+                    <input type="checkbox" class="checkproduct" name="checkproduct" id="1">
+                    <div id="srnum" class="srNumber">09</div>
+                    <div id="pName" class="pName">Elegance Kurta Set</div>
+                    <div id="pUnits" class="pUnits">2</div>
+                    <div id="pPrice" class="pPrice">16000</div>
+                    <div id="pAction" class="pAction">Remove</div>
+                </div>
+            </div>
+            <a id="proceedToPay" href="payment.html">Proceed to Pay</a>
+        </div>
+    </div>
+
+</body>
+
+<!-- Linked JavaScript  -->
+<script>
+    document.getElementById("back-home").onclick = function() {
+    // Replace the current history entry with index.html
+    history.replaceState(null, null, 'productDetails.html');
+    
+    // Navigate to index.html
+    window.location.href = "productDetails.html";
+};
+</script>
+
+</html>

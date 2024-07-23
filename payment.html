@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Lumina Official</title>
+
+    <!-- Linked files  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <button id="back-home"><i class="fas fa-arrow-left"></i> Back</button>
+        <img src="assets/images/logo.png" alt="This is the logo image">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="paymentMain">
+        <div class="orderDetails pmdetails">
+            <h3 style="margin-bottom: 5rem;" class="heading1">___Product Details</h3>
+
+            <h4>Selected Products</h4>
+            <p>04</p>
+            
+            <h4>Products Price</h4>
+            <p>15000 <span>pkr</span></p>
+
+            <h4>Delivery Charges</h4>
+            <p>200 <span>pkr</span></p>
+
+            <h4>Total Cost</h4>
+            <p>15200 <span>pkr</span></p>
+
+            <span class="span">
+                <span style="font-weight: 800; font-size: 1.4rem; color: red;">Warning:</span>
+                Please Cross check your these products details because these details will sent to us to process your order and you've to pay this amount for order completion. Thanks.
+            </span>
+        </div>
+        <div class="adressDetails pmdetails">
+            <h3 style="margin-bottom: 5rem;" class="heading1">___Delivery Details</h3>
+
+            <input type="email" name="email" id="email" placeholder="Your Email">
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <input type="number" name="phoneNumber" id="PhoneNumber" placeholder="Your Phone Number">
+            <input type="text" name="address" id="address" placeholder="Your Address">
+            <input type="text" name="city" id="city" placeholder="Your City">
+
+            <span style="margin-top:1rem;" class="span">
+                <span style=" font-weight: 800; font-size: 1.4rem; color: red;">Warning:</span>
+                Please enter accurate and authentic information because your order will be deivered according to your these details. Thanks.
+            </span>
+        </div>
+        <div class="paymentDetails pmdetails">
+            <h3 style="margin-bottom: 5rem;" class="heading1">___Payment Details</h3>
+
+            <input type="radio" name="paymentOption" id="paymentOption">
+            <label for="paymentOption">Cash On Delivery</label><br><br><br>
+            <input type="radio" name="paymentOption" id="paymentOption2">
+            <label for="paymentOption">Pay with Card</label><br><br>
+
+            <button id="confirmbtn">Confirm Order</button>
+        </div>
+    </div>
+
+    
+</body>
+
+<!-- Linked JavaScript  -->
+<script src="assets/javacript/imageSlider.js"></script>
+<script>
+    document.getElementById("back-home").onclick = function() {
+    // Replace the current history entry with index.html
+    history.replaceState(null, null, 'index.html');
+    
+    // Navigate to index.html
+    window.location.href = "productDetails.html";
+};
+</script>
+
+</html>

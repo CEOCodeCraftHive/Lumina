@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping - Lumina Official</title>
+
+    <!-- Linked files  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body id="body">
+    <header class="header">
+        <img id="logo" src="assets/images/logo.png" alt="This is the logo image!">
+        <div class="searchbar">
+            <input type="text" name="searchitems" id="searchitems" placeholder="Search">
+            <i class="search-btn fas fa-search search-icon"></i>
+        </div>
+        <nav>
+            <div id="menushowbtn" class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><button id="loginDisplay">Login <i class="fas fa-sign-in-alt"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="smallHeader1" class="small-header invisible">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li id="login512"><a href="#">Login <i class="fas fa-sign-in-alt"></i></a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="leftbar">
+            <h1 id="dicon"><i class="fas fa-tachometer-alt"></i></h1>
+
+            <div class="dropdown">
+                <button class="dropdown-button">New Arrivals  <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">2 - Piece <!-- <i class="fas fa-chevron-right"></i> -->
+                        <!-- <div class="dropdown-subcontent">
+                            <div class="dropdown-subitem">Stiched</div>
+                            <div class="dropdown-subitem">Unstiched</div>
+                        </div> -->
+                    </div>
+                    <div class="dropdown-item">3 - Piece <!-- <i class="fas fa-chevron-right"></i> -->
+                        <!-- <div class="dropdown-subcontent">
+                            <div class="dropdown-subitem">Stiched</div>
+                            <div class="dropdown-subitem">Unstiched</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button  style="background-color: transparent; border: 2px solid white; color: white;" class="dropdown-button">Coming Soon <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">2 - Piece <!-- <i class="fas fa-chevron-right"></i> -->
+                        <!-- <div class="dropdown-subcontent">
+                            <div class="dropdown-subitem">Stiched</div>
+                            <div class="dropdown-subitem">Unstiched</div>
+                        </div> -->
+                    </div>
+                    <div class="dropdown-item">3 - Piece <!-- <i class="fas fa-chevron-right"></i> -->
+                        <!-- <div class="dropdown-subcontent">
+                            <div class="dropdown-subitem">Stiched</div>
+                            <div class="dropdown-subitem">Unstiched</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button  style="background-color: transparent; border: 2px solid white; color: white;" class="dropdown-button">Dupattas</button>
+            </div>
+        </div>
+        <div class="rightbar">
+            <div class="topbar">
+                <div class="topbarLeft">
+                    <label for="filter">Filters</label>
+                    <select name="filter" id="filter">
+                        <option disabled selected value="1">none</option>
+                        <option value="2">Most Selling</option>
+                        <option value="3">Highly Rated</option>
+                        <option value="4">Price Up to Down</option>
+                        <option value="5">Price Down to Up</option>
+                    </select>
+                </div>
+                <div class="topbarRight">
+                    <label class="cartIcon"><span id="vcLabel">View Cart</span> <i class="fas fa-shopping-cart"></i></label>
+                </div>
+            </div>
+            <div class="productsDiv">
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+                <div id="" class="product">
+                    <div class="img">
+                        <div class="shade"></div>
+                        <h4><span>20%</span>OFF</h4>
+                        <h3 id="new">NEW</h3>
+                        <img src="assets/images/product-Image.jpg" alt="This is the product Image!">
+                    </div>
+                    <h3>Elegance Kurta Set</h3>
+                    <div class="price">
+                        <div class="cut-price">
+                            <div class="cutline"></div>
+                            <p>5000</p>
+                        </div>
+                        <h2>8000<span>pkr</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login class  -->
+     <div class="login-main">
+        <span class="close-icon">
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="login-div">
+            <div class="login-content">
+                <img src="assets/images/logo.png" alt="This is the logo image!">
+                <input type="email" name="email" id="useremail" placeholder="Your email" required>
+                <input type="password" name="password" id="userpassword" placeholder="Your password" required>
+                <span class="span"><input class="mark" style="width: fit-content;" type="checkbox" name="remember" id="remember">  Remember me</span>
+                <button id="login">LOGIN</button>
+                <p>Don't have account? <span id="signupClassDisplay">Create Here</span></p>
+
+                <div class="login-message">
+                    <h3>Logged In Sucessfully!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="signup-div">
+            <div class="signup-content">
+                <img src="assets/images/logo.png" alt="This is the logo image!">
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+                <div class="login-otp">
+                    <input type="number" name="phone" id="phone" placeholder="Your Phone" required>
+                    <button id="sendOTP">Send OTP</button>
+                </div>
+                <input type="number" name="otp" id="otp" placeholder="OTP" required>
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+                <input type="password" name="password" id="password" placeholder="Your password" required>
+                <input type="password" name="confirm password" id="confirm password" placeholder="Confirm password" required>
+                <button id="signup">CREATE ACCOUNT</button>
+                <p>Already have account? <span id="loginClassDisplay">LOGIN</span></p>
+            </div>
+        </div>
+     </div>
+</body>
+<script src="assets/javacript/login.js"></script>
+<script src="assets/javacript/menu.js"></script>
+
+<script>
+function applyMediaQuery() {
+    if (window.matchMedia("(max-width: 400px)").matches) {
+        document.addEventListener("DOMContentLoaded", function() {
+            const input = document.getElementById("searchitems");
+            const logo = document.getElementById("logo");
+
+            input.addEventListener("focus", function() {
+                logo.style.display = "none";
+            });
+
+            input.addEventListener("blur", function() {
+                logo.style.display = "block";
+            });
+        });
+    }
+}
+
+// Initial check
+applyMediaQuery();
+
+// Add a listener to reapply the logic if the window is resized
+window.addEventListener("resize", applyMediaQuery);
+
+</script>
+<script>
+    // JavaScript to handle the click event
+    document.addEventListener("DOMContentLoaded", function() {
+        const products = document.querySelectorAll('.product');
+        
+        products.forEach(function(product) {
+            product.addEventListener('click', function() {
+                window.location.href = 'productDetails.html';
+            });
+        });
+    });
+</script>
+</html>
